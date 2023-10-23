@@ -23,7 +23,8 @@ public class BaseTest {
 	@BeforeTest
 	public void setup() throws IOException {
 		if(driver==null) {
-			FileReader fr = new FileReader("C:\\Users\\Asus\\eclipse-workspace\\Frame\\src\\test\\resources\\ConfigFiles\\config.properties");
+			System.out.println(System.getProperty("user.dir"));
+			FileReader fr = new FileReader(System.getProperty("user.dir") + "\\src\\test\\resources\\ConfigFiles\\config.properties");
 			pro.load(fr);
 		}
 		
